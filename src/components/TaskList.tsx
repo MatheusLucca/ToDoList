@@ -33,6 +33,7 @@ export function TaskList() {
         }
       ]
       )
+      setNewTaskTitle('')
     }
 
 
