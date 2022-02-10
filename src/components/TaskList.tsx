@@ -19,7 +19,7 @@ export function TaskList() {
     let newId = tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1;
     let inputToDo = document.getElementById('newToDo')
     inputToDo!.style.border = 'none';
-    if (newTaskTitle.trim() == '') {
+    if (!newTaskTitle.trim()) {
       inputToDo!.style.border = '1px solid red';
       inputToDo!.setAttribute('placeholder', 'Campo todo em branco')
     } else {
