@@ -15,6 +15,9 @@ export function TaskList() {
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
   function handleCreateNewTask() {
+    if (!newTaskTitle) {
+      return
+    }
     // Crie uma nova task com um id random, não permita criar caso o título seja vazio.
     let newId = tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1;
     let inputToDo = document.getElementById('newToDo')
